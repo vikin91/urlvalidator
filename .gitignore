@@ -8,6 +8,13 @@
 *.so
 *.dylib
 
+# Exclude GoLand/IntelliJ files in the repo.
+# Note that trailing `/**/*` is required because some `git` versions will not respect the following inclusions without
+# it. See https://stackoverflow.com/a/60288435/484050
+# Leading `/**/` is required to apply exclsuion to all directories of the repo recursively. Basically, it is needed
+# because of the trailing `/**/*`.
+/**/.idea/**/*
+
 # Test binary, built with `go test -c`
 *.test
 
